@@ -1,0 +1,44 @@
+{% set active_page = "home" %}
+
+{% block title %} - All Users {% endblock %}
+
+{% block content %}
+<div class="panel-list">
+    <h3 class="ml-2 mt-3">All Users</h3>
+    <div class="row row-content">
+        <div class="col-12">
+            <h4>{{ Users }}</h4>
+        </div>
+
+        <div class="table-responsive-sm col-12">
+            {% if users|length > 0 %}
+            <table class="table table-sm table-panel table-desktop">
+                <thead>
+                <tr>
+                    <th scope="col th-sm">#</th>
+                    <th scope="col th-sm">User ID</th>
+                    <th scope="col th-sm">Name</th>
+                    <th scope="col th-sm">Salary</th>
+                    <th scope="col th-sm">Date Joined</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                <tr class='clickable-row'>
+                    <th scope="row">{{ loop.index }}</th>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.salary }}</td>
+                    <td>{{ user.time_created.strftime('%Y/%m/%d') }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            {% else %}
+            <div class="text-center empty-table" style="display: block;">No Users to display</div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
