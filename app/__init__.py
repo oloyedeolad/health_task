@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_bootstrap import Bootstrap
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
@@ -17,7 +18,7 @@ def create_app(config_name):
     application.config.from_object(app_config[config_name])
     application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     database.init_app(application)
-
+    bootstrap = Bootstrap(application)
     migrate = Migrate(app = application, db = database, directory="intron_health_migrations")
 
     register_blueprints()
@@ -31,4 +32,6 @@ def create_app(config_name):
 def register_blueprints():
     # Import all BluePrints
     from .home import home as home_blueprint
+    from .hmo import hmo as hmo_blueprint
     application.register_blueprint(home_blueprint, url_prefix='/home')
+    application.register_blueprint(hmo_blueprint, url_prefix='/hmo')

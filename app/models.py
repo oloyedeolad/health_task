@@ -23,21 +23,22 @@ class HmoEnumProvider(enum.Enum):
     HM04 = 'HM04'
 
 
+
 class Patient(database.Model):
     __tablename__ = 'patient'
     id = database.Column(database.Integer, autoincrement=True, primary_key=True)
     name = database.Column(database.String(100), nullable=False, unique=True)
     age = database.Column(database.Integer, nullable=False)
-    gender = database.Column(database.Boolean, nullable=False)
-    diagnosis = database.Column(database.String(255), nullable=False)
+    gender = database.Column(database.Enum("MALE", "FEMALE", name="gender"), nullable=False)
+    diagnosis = database.Column(database.TEXT(1000), nullable=False)
     hmo_provider = database.Column(
-        database.Enum(HmoEnumProvider), nullable=False
+        database.Enum("HM01", "HM02", "HM03", "HM04", name="hmo_provider"), nullable=False
     )
     patient_services = database.relationship('PatientService', backref='patient', lazy=True)
 
 
 class PatientService(database.Model):
-    __tablename__ = 'user_services'
+    __tablename__ = 'patient_services'
     id = database.Column(database.Integer, autoincrement=True, primary_key=True)
     provided_service = database.Column(database.String(255), nullable=False)
     service_date = database.Column(database.Date, nullable=False)

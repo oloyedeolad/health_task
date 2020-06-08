@@ -1,0 +1,90 @@
+{% extends "bootstrap/base.html" %}
+{% from "hmo/_formhelpers.html" import render_field %}
+
+{% set active_page = "Create Claim" %}
+
+{% block title %} - Create claim {% endblock %}
+
+{% block content %}
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Add Patient
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">Add Patient</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <div class="col-4"></div>
+      <div class="modal-body">
+
+
+        <form  method=post>
+          <dl>
+            {{ render_field(form.name) }}
+            {{ render_field(form.age) }}
+            {{ render_field(form.gender) }}
+            {{ render_field(form.diagnosis) }}
+            {{ render_field(form.hmo_provider) }}
+          </dl>
+    <p><input type=submit value=Register>
+</form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="panel-list">
+    <h3 class="ml-2 mt-3">All Patient</h3>
+    <div class="row row-content">
+        <div class="col-12">
+            <h4>{{ Patients }}</h4>
+        </div>
+
+        <div class="table table-striped col-12">
+            {% if patients|length > 0 %}
+            <table class="table table-sm table-panel table-desktop">
+                <thead>
+                <tr>
+                    <th scope="col th-sm">#</th>
+                    <th scope="col th-sm">Patient ID</th>
+                    <th scope="col th-sm">Name</th>
+                    <th scope="col th-sm">Age</th>
+                    <th scope="col th-sm">Gender</th>
+                  <th scope="col th-sm">Diagnosis</th>
+                  <th scope="col th-sm">hmo_provider</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for patient in patients %}
+                <tr class='clickable-row'>
+                    <th scope="row">{{ loop.index }}</th>
+                    <td>{{ patient.id }}</td>
+                    <td>{{ patient.name }}</td>
+                    <td>{{ patient.age }}</td>
+                    <td>{{ patient.gender }}</td>
+                  <td>{{ patient.diagnosis }}</td>
+                  <td>{{ patient.hmo_provider }}</td>
+                  <td><button class="btn-primary">Add Services</button></td>
+                  <td><button class="btn-primary">View Services</button></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            {% else %}
+            <div class="text-center empty-table" style="display: block;">No Users to display</div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+

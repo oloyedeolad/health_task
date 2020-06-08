@@ -2,13 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3647d8a0-08cc-480c-90b7-0e50532d711e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/hmo/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/hmo/view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/hmo/_formhelpers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/hmo/claim.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/intron_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/instance/intron_db.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,6 +37,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -74,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580685016948</updated>
-      <workItem from="1591620168346" duration="795000" />
+      <workItem from="1591620168346" duration="18228000" />
     </task>
     <task id="LOCAL-00001" summary="Initial project">
       <created>1591620403982</created>
@@ -90,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591620528920</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="patient and patientservice model up">
+      <created>1591621084752</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591621084752</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,7 +123,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial project" />
     <MESSAGE value="manager and requirements setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="manager and requirements setup" />
+    <MESSAGE value="patient and patientservice model up" />
+    <option name="LAST_COMMIT_MESSAGE" value="patient and patientservice model up" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -107,10 +132,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2677" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591620962913" />
-    <state x="2504" y="87" key="CommitChangelistDialog2" timestamp="1591620527545">
+    <state x="2504" y="87" key="CommitChangelistDialog2" timestamp="1591621083555">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2504" y="87" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591620527545" />
+    <state x="2504" y="87" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591621083555" />
     <state x="2884" y="276" key="EnvironmentVariablesDialog" timestamp="1591620826941">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -119,24 +144,64 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2659" y="273" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591620960783" />
-    <state width="1875" height="281" key="GridCell.Tab.0.bottom" timestamp="1591620831278">
+    <state width="1875" height="281" key="GridCell.Tab.0.bottom" timestamp="1591638930933">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="281" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591620831278" />
-    <state width="1875" height="281" key="GridCell.Tab.0.center" timestamp="1591620831278">
+    <state width="1875" height="281" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591638930933" />
+    <state width="1875" height="281" key="GridCell.Tab.0.center" timestamp="1591638930933">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="281" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591620831278" />
-    <state width="1875" height="281" key="GridCell.Tab.0.left" timestamp="1591620831278">
+    <state width="1875" height="281" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591638930933" />
+    <state width="1875" height="281" key="GridCell.Tab.0.left" timestamp="1591638930933">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="281" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591620831278" />
-    <state width="1875" height="281" key="GridCell.Tab.0.right" timestamp="1591620831278">
+    <state width="1875" height="281" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591638930933" />
+    <state width="1875" height="281" key="GridCell.Tab.0.right" timestamp="1591638930933">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="281" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591620831278" />
+    <state width="1875" height="281" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591638930933" />
+    <state width="1875" height="347" key="GridCell.Tab.1.bottom" timestamp="1591637683181">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1875" height="347" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591637683181" />
+    <state width="1875" height="347" key="GridCell.Tab.1.center" timestamp="1591637683181">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1875" height="347" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591637683181" />
+    <state width="1875" height="347" key="GridCell.Tab.1.left" timestamp="1591637683180">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1875" height="347" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591637683180" />
+    <state width="1875" height="347" key="GridCell.Tab.1.right" timestamp="1591637683181">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1875" height="347" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591637683181" />
+    <state x="2729" y="343" width="318" height="353" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1591628451466">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2729" y="343" width="318" height="353" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591628451466" />
+    <state x="2722" y="292" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1591628054960">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2722" y="292" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1591628054960" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/hmo/view.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/hmo/view.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/IntronHealthExercise_v2$application.coverage" NAME="application Coverage Results" MODIFIED="1591620831265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IntronHealthExercise_v2$application.coverage" NAME="application Coverage Results" MODIFIED="1591638930925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
