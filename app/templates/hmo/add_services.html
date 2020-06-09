@@ -1,0 +1,62 @@
+{% extends "hmo/navigation.html" %}
+{% from "hmo/_formhelpers.html" import render_field %}
+
+
+
+
+
+{% block content %}
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Add Services
+</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="row" style="padding-left: 10px">
+    <div class="text-center"><h2>Create Patient Services</h2></div>
+    <div class="col-md-5"></div>
+    <div class="col-md-3">
+<form method=post>
+    <dl>
+        {{ render_field(form.patient_id) }}
+        {{ render_field(form.provided_service) }}
+        {{ render_field(form.service_date) }}
+        {{ render_field(form.service_name) }}
+        {{ render_field(form.service_type) }}
+        {{ render_field(form.provider_name) }}
+        {{ render_field(form.provider_source) }}
+        {{ render_field(form.cost) }}
+
+    </dl>
+    <p><input type=submit value=Submit>
+</form>
+    </div>
+</div>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+    <div class="text-center">
+        <h2>Patient Services</h2>
+    {{ table }}
+        </div>
+    <div class="text-center"><h2>Total: {{ total }}</h2></div>
+</div>
+{% endblock %}

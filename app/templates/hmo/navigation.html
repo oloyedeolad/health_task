@@ -1,0 +1,27 @@
+{% extends "bootstrap/base.html" %}
+
+<title>{% block title %}{% endblock %} - HMO</title>
+{% block navbar %}
+<div class="container">
+  <h1><a href="#">HMO</a></h1>
+  <div class="navbar navbar-default">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href=" {{ url_for('hmo.create_patient') }} ">Home</a></li>
+           <li><a href="{{ url_for('hmo.all_services')}}">All Services</a></li>
+
+       </ul>
+    </div>
+ </div>
+{% endblock %}
+
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>

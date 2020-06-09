@@ -9,9 +9,8 @@ class PatientForm(ModelForm):
         model = Patient
 
 
-
 class PatientServiceForm(ModelForm):
     class Meta:
         model = PatientService
-
+        include = ['patient_id']
 

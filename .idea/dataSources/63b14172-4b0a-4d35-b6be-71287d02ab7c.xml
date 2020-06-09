@@ -97,97 +97,87 @@
       <DataType>VARCHAR(4)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="27" parent="8" name="sqlite_autoindex_patient_1">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>name</ColNames>
-      <ColumnCollations></ColumnCollations>
-      <Unique>1</Unique>
-    </index>
-    <key id="28" parent="8">
+    <key id="27" parent="8">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="29" parent="8">
-      <ColNames>name</ColNames>
-      <UnderlyingIndexName>sqlite_autoindex_patient_1</UnderlyingIndexName>
-    </key>
-    <check id="30" parent="8" name="gender">
+    <check id="28" parent="8" name="gender">
       <Predicate>gender IN (&apos;MALE&apos;, &apos;FEMALE&apos;)</Predicate>
     </check>
-    <check id="31" parent="8" name="hmo_provider">
+    <check id="29" parent="8" name="hmo_provider">
       <Predicate>hmo_provider IN (&apos;HM01&apos;, &apos;HM02&apos;, &apos;HM03&apos;, &apos;HM04&apos;)</Predicate>
     </check>
-    <column id="32" parent="9" name="id">
+    <column id="30" parent="9" name="id">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="33" parent="9" name="provided_service">
+    <column id="31" parent="9" name="provided_service">
       <Position>2</Position>
       <DataType>VARCHAR(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="34" parent="9" name="service_date">
+    <column id="32" parent="9" name="service_date">
       <Position>3</Position>
       <DataType>DATE|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="35" parent="9" name="service_name">
+    <column id="33" parent="9" name="service_name">
       <Position>4</Position>
       <DataType>VARCHAR(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="9" name="service_type">
+    <column id="34" parent="9" name="service_type">
       <Position>5</Position>
       <DataType>VARCHAR(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="37" parent="9" name="provider_name">
+    <column id="35" parent="9" name="provider_name">
       <Position>6</Position>
       <DataType>VARCHAR(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="38" parent="9" name="provider_source">
+    <column id="36" parent="9" name="provider_source">
       <Position>7</Position>
       <DataType>VARCHAR(150)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="39" parent="9" name="cost">
+    <column id="37" parent="9" name="cost">
       <Position>8</Position>
       <DataType>DECIMAL|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="40" parent="9" name="patient_id">
+    <column id="38" parent="9" name="patient_id">
       <Position>9</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="41" parent="9">
+    <key id="39" parent="9">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="42" parent="9">
+    <foreign-key id="40" parent="9">
       <ColNames>patient_id</ColNames>
       <RefTableName>patient</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="43" parent="10" name="type">
+    <column id="41" parent="10" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="44" parent="10" name="name">
+    <column id="42" parent="10" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="45" parent="10" name="tbl_name">
+    <column id="43" parent="10" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="46" parent="10" name="rootpage">
+    <column id="44" parent="10" name="rootpage">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="47" parent="10" name="sql">
+    <column id="45" parent="10" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>

@@ -1,15 +1,15 @@
 """empty message
 
-Revision ID: d3c787aeba6d
+Revision ID: 6a93e2418562
 Revises: 7e6b8fa444d3
-Create Date: 2020-06-08 16:54:41.726047
+Create Date: 2020-06-09 08:31:54.129439
 
 """
 import sqlalchemy as sa
 from alembic import op
 
 # revision identifiers, used by Alembic.
-revision = 'd3c787aeba6d'
+revision = '6a93e2418562'
 down_revision = '7e6b8fa444d3'
 branch_labels = None
 depends_on = None
@@ -24,15 +24,14 @@ def upgrade():
     sa.Column('gender', sa.Enum('MALE', 'FEMALE', name='gender'), nullable=False),
     sa.Column('diagnosis', sa.TEXT(length=1000), nullable=False),
     sa.Column('hmo_provider', sa.Enum('HM01', 'HM02', 'HM03', 'HM04', name='hmo_provider'), nullable=False),
-    sa.PrimaryKeyConstraint('id'),
-    sa.UniqueConstraint('name')
+    sa.PrimaryKeyConstraint('id')
     )
     op.create_table('patient_services',
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
     sa.Column('provided_service', sa.String(length=255), nullable=False),
     sa.Column('service_date', sa.Date(), nullable=False),
     sa.Column('service_name', sa.String(length=100), nullable=False),
-    sa.Column('service_type', sa.String(length=255), nullable=False),
+    sa.Column('service_type', sa.Enum('Hematology', 'Microbiology', 'Chemical Pathology', 'Histopathology', 'Immunology'), nullable=False),
     sa.Column('provider_name', sa.String(length=100), nullable=False),
     sa.Column('provider_source', sa.String(length=150), nullable=False),
     sa.Column('cost', sa.DECIMAL(), nullable=False),
