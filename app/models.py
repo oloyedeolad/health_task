@@ -1,4 +1,3 @@
-import enum
 from datetime import datetime
 
 from app import database
@@ -14,13 +13,6 @@ class User(database.Model):
 
     def __repr__(self):
         return '<User: {}>'.format(self.name)
-
-
-class HmoEnumProvider(enum.Enum):
-    HM01 = 'HM01'
-    HM02 = 'HM02'
-    HM03 = 'HM03'
-    HM04 = 'HM04'
 
 
 class Patient(database.Model):

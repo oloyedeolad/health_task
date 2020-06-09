@@ -7,7 +7,7 @@ from . import hmo as hmo_blueprint
 from .patient_table import PatientTable, PatientServiceTable
 
 
-@hmo_blueprint.route('/create', methods=['GET', 'POST'])
+@hmo_blueprint.route('/patient', methods=['GET', 'POST'])
 def create_patient():
     """
       Create Patient
@@ -18,7 +18,7 @@ def create_patient():
         patients = Patient.query.all()
         print(patients)
         table = data_in_table(patients)
-        return render_template('hmo/claim.html', form=form, table=table)
+        return render_template('hmo/claim.html', form=form, table=table), 200
     if request.method == 'POST' and form.validate():
         patient = Patient(name=form.data['name'],
                           age=form.data['age'],
@@ -30,8 +30,8 @@ def create_patient():
         flash("Patient creation successful")
         patients = Patient.query.all()
         table = data_in_table(patients)
-        return render_template('hmo/claim.html', form=form, table=table)
-    return "Bad response"
+        return render_template('hmo/claim.html',  form=form, table=table), 201
+    return "Bad response", 400
 
 
 def data_in_table(data):
